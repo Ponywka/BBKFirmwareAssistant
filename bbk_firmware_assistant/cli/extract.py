@@ -5,7 +5,7 @@ import zipfile
 from pathlib import Path
 
 from ..services.extractor import find_dumper, read_ota_metadata
-from ._common import DOWNLOADS_DIR, EXTRACTED_DIR, ask_path, ask_select, error, run_cmd, success
+from ._common import DOWNLOADS_DIR, EXTRACTED_DIR, ask_confirm, ask_path, ask_select, error, run_cmd, success
 
 CHUNK_SIZE = 4 * 1024 * 1024
 
@@ -92,5 +92,12 @@ def flow_extract() -> None:
     success(f"Extracted {len(imgs)} partition images to {out_dir}")
     if imgs:
         print("  " + ", ".join(imgs[:8]) + ("..." if len(imgs) > 8 else ""))
+
+    # payload.bin is no longer needed once the images are out (it's ~as large as all of them)
+    if payload_path.is_file() and payload_path.parent == out_dir:
+        size_gb = payload_path.stat().st_size / 1024**3
+        if ask_confirm(f"Delete {payload_path.name} (freed {size_gb:.1f} GB)?"):
+            payload_path.unlink()
+            print(f"  Deleted {payload_path.name}")
 
     success("Done — ready to flash")
