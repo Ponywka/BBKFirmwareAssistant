@@ -16,9 +16,10 @@ class Fastboot:
         self.dry_run = dry_run
 
     def run(self, *args: str) -> int:
-        print(f"  $ fastboot {' '.join(args)}")
         if self.dry_run:
+            print(f"fastboot {' '.join(args)}")
             return 0
+        print(f"  $ fastboot {' '.join(args)}")
         return subprocess.run(["fastboot", *args]).returncode
 
     def flash_or_retry(self, *args: str) -> bool:
@@ -117,6 +118,11 @@ def _flash_both_slots(fb: Fastboot, files: list[Path]) -> bool:
     return True
 
 
+def _header(text: str, dry_run: bool) -> None:
+    """Print a section header: as a shell comment in dry-run, decorated otherwise."""
+    print(f"\n# {text}" if dry_run else f"\n── {text} ──")
+
+
 def _do_flash(
     img_dir: Path,
     groups: dict[str, list[Path]],
@@ -126,7 +132,7 @@ def _do_flash(
     fb = Fastboot(dry_run)
 
     if dry_run:
-        print("\n  (dry-run — no commands will be executed)\n")
+        print("\n# dry-run — no commands will be executed\n")
     else:
         print("\n── Step 1: Enter fastboot (bootloader mode) ──")
         print("  Power off the device, then hold  Volume Down + Power  until")
@@ -138,11 +144,11 @@ def _do_flash(
 
     # Phase 1 (bootloader-mode fastboot): boot/dtbo/vbmeta*/... plus modem, both slots.
     if groups.get("bootloader"):
-        print("\n── BOOTLOADER partitions ──")
+        _header("BOOTLOADER partitions", dry_run)
         if not _flash_both_slots(fb, groups["bootloader"]):
             return
 
-    print("\n── Rebooting into fastbootd ──")
+    _header("Rebooting into fastbootd", dry_run)
     fb.run("reboot", "fastboot")
     if not dry_run:
         if not ask_confirm("Device is in fastbootd (userspace fastboot) and connected?"):
@@ -150,27 +156,27 @@ def _do_flash(
             return
 
     if android_ver == "10-11":
-        print("\n── Android 10-11 cleanup ──")
+        _header("Android 10-11 cleanup", dry_run)
         fb.run("delete-logical-partition", "my_bigball-cow")
         fb.run("delete-logical-partition", "my_bigball")
 
     skip_dynamic = False
     super_files = groups.get("super", [])
     if super_files:
-        print("\n── SUPER ──")
+        _header("SUPER", dry_run)
         if not fb.flash_or_retry("flash", "super", str(super_files[0])):
             return
         skip_dynamic = True  # super.img already contains the dynamic partitions
 
     critical = groups.get("critical", [])
     if critical:
-        print("\n── CRITICAL ──")
+        _header("CRITICAL", dry_run)
         if not _flash_both_slots(fb, critical):
             return
 
     dynamic = groups.get("dynamic", [])
     if dynamic and not skip_dynamic:
-        print("\n── SYSTEM (logical partitions) ──")
+        _header("SYSTEM (logical partitions)", dry_run)
         for f in dynamic:
             for slot in ("_a", "_b"):
                 fb.run("delete-logical-partition", f"{f.stem}{slot}-cow")
@@ -191,7 +197,7 @@ def _do_flash(
         if slot in ("a", "b"):
             fb.run(f"--set-active={slot}")
 
-    print("\n── Rebooting ──")
+    _header("Rebooting", dry_run)
     if dry_run:
         fb.run("reboot")
         success("Dry-run complete — no changes were made.")
