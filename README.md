@@ -66,9 +66,8 @@ their `version_name` from the embedded OTA metadata. You can also paste a
 ### Extract
 
 Select a downloaded `.zip` (or a raw `payload.bin`) from the `downloads`
-folder, or enter a path manually. The tool extracts `payload.bin`, runs
-`payload-dumper-go` to produce the partition `.img` files, and organizes them
-into `BOOTLOADER`, `CRITICAL`, `SYSTEM`, and `MODEM` groups ready for flashing.
+folder, or enter a path manually. The tool extracts `payload.bin` and runs
+`payload-dumper-go` to produce the partition `.img` files, ready for flashing.
 
 ### Flash
 
@@ -90,7 +89,7 @@ directory), so each project/working folder keeps its own files:
 | Path | Purpose |
 | --- | --- |
 | `./downloads` | Downloaded OTA packages |
-| `./firmware/<version>` | Extracted, organized partition images |
+| `./firmware/<version>` | Extracted partition images |
 
 ## Acknowledgements
 

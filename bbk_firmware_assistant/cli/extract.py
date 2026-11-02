@@ -4,7 +4,7 @@ import shutil
 import zipfile
 from pathlib import Path
 
-from ..services.extractor import find_dumper, organize_firmware, read_ota_metadata
+from ..services.extractor import find_dumper, read_ota_metadata
 from ._common import DOWNLOADS_DIR, EXTRACTED_DIR, ask_path, ask_select, error, run_cmd, success
 
 CHUNK_SIZE = 4 * 1024 * 1024
@@ -92,10 +92,5 @@ def flow_extract() -> None:
     success(f"Extracted {len(imgs)} partition images to {out_dir}")
     if imgs:
         print("  " + ", ".join(imgs[:8]) + ("..." if len(imgs) > 8 else ""))
-
-    print("\n  Organizing partitions into groups...")
-    counts = organize_firmware(out_dir)
-    for group, n in counts.items():
-        print(f"    {group}: {n} file(s)")
 
     success("Done — ready to flash")

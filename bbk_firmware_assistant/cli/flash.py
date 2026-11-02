@@ -6,7 +6,6 @@ from pathlib import Path
 from ..services import flasher
 from ._common import EXTRACTED_DIR, ask_confirm, ask_path, ask_select, error, success
 
-PARTITION_GROUPS = ("BOOTLOADER", "CRITICAL", "SYSTEM", "MODEM")
 MANUAL_PATH = "[ Enter path manually ]"
 
 
@@ -36,16 +35,16 @@ class Fastboot:
 
 
 def _select_firmware_dir() -> Path | None:
-    """Let the user pick an extracted firmware dir or type a path."""
+    """Let the user pick a firmware dir with .img files, or type a path."""
     EXTRACTED_DIR.mkdir(parents=True, exist_ok=True)
     dirs = sorted(d for d in EXTRACTED_DIR.iterdir() if d.is_dir())
 
     def summary(d: Path) -> str:
-        present = ", ".join(g for g in PARTITION_GROUPS if (d / g).is_dir())
-        return f"{d.name}  ({present})"
+        n = len(list(d.glob("*.img"))) + len(list(d.glob("*/*.img")))
+        return f"{d.name}  ({n} image{'s' if n != 1 else ''})"
 
     choices = [summary(d) for d in dirs] + [MANUAL_PATH]
-    picked = ask_select(f"Select extracted firmware (in {EXTRACTED_DIR}):", choices)
+    picked = ask_select(f"Select firmware (in {EXTRACTED_DIR}):", choices)
     if not picked:
         return None
 
@@ -71,16 +70,25 @@ def flow_flash() -> None:
     if not img_dir:
         return
 
-    groups = flasher.firmware_groups(img_dir)
-    if sum(len(v) for v in groups.values()) == 0:
-        error(f"No firmware files found in {img_dir} (expected {'/'.join(PARTITION_GROUPS)} subdirs)")
+    images = flasher.collect_images(img_dir)
+    skipped = sorted(
+        f for f in [*img_dir.glob("*.img"), *img_dir.glob("*/*.img")]
+        if flasher.never_flash(f.stem)
+    )
+    if skipped:
+        print("\n  Skipping (never flashed): " + ", ".join(f.name for f in skipped))
+    if not images:
+        error(f"No .img files found in {img_dir}")
         return
 
+    groups: dict[str, list[Path]] = {"bootloader": [], "super": [], "dynamic": [], "critical": []}
+    for f in images:
+        groups[flasher.classify(f)].append(f)
+
     print()
-    for group, files in groups.items():
-        if files:
-            shown = ", ".join(f.name for f in files[:4])
-            print(f"  {group}: {shown}{'...' if len(files) > 4 else ''}")
+    for label in ("bootloader", "super", "dynamic", "critical"):
+        shown = ", ".join(f.name for f in groups[label][:5])
+        print(f"  {label}: {shown}{'...' if len(groups[label]) > 5 else ''}")
 
     mode = ask_select("Mode:", ["Dry-run (show commands only)", "Flash (write to device)"])
     if not mode:
@@ -109,7 +117,12 @@ def _flash_both_slots(fb: Fastboot, files: list[Path]) -> bool:
     return True
 
 
-def _do_flash(img_dir: Path, groups: dict, dry_run: bool = False, android_ver: str = "13-15") -> None:
+def _do_flash(
+    img_dir: Path,
+    groups: dict[str, list[Path]],
+    dry_run: bool = False,
+    android_ver: str = "13-15",
+) -> None:
     fb = Fastboot(dry_run)
 
     if dry_run:
@@ -123,9 +136,10 @@ def _do_flash(img_dir: Path, groups: dict, dry_run: bool = False, android_ver: s
             print("  Cancelled.")
             return
 
-    if groups.get("BOOTLOADER"):
-        print("\n── BOOTLOADER ──")
-        if not _flash_both_slots(fb, groups["BOOTLOADER"]):
+    # Phase 1 (bootloader-mode fastboot): boot/dtbo/vbmeta*/... plus modem, both slots.
+    if groups.get("bootloader"):
+        print("\n── BOOTLOADER partitions ──")
+        if not _flash_both_slots(fb, groups["bootloader"]):
             return
 
     print("\n── Rebooting into fastbootd ──")
@@ -140,20 +154,29 @@ def _do_flash(img_dir: Path, groups: dict, dry_run: bool = False, android_ver: s
         fb.run("delete-logical-partition", "my_bigball-cow")
         fb.run("delete-logical-partition", "my_bigball")
 
-    if groups.get("CRITICAL"):
+    skip_dynamic = False
+    super_files = groups.get("super", [])
+    if super_files:
+        print("\n── SUPER ──")
+        if not fb.flash_or_retry("flash", "super", str(super_files[0])):
+            return
+        skip_dynamic = True  # super.img already contains the dynamic partitions
+
+    critical = groups.get("critical", [])
+    if critical:
         print("\n── CRITICAL ──")
-        if not _flash_both_slots(fb, groups["CRITICAL"]):
+        if not _flash_both_slots(fb, critical):
             return
 
-    sys_files = groups.get("SYSTEM", [])
-    if sys_files:
-        print("\n── SYSTEM ──")
-        for f in sys_files:
+    dynamic = groups.get("dynamic", [])
+    if dynamic and not skip_dynamic:
+        print("\n── SYSTEM (logical partitions) ──")
+        for f in dynamic:
             for slot in ("_a", "_b"):
                 fb.run("delete-logical-partition", f"{f.stem}{slot}-cow")
                 fb.run("delete-logical-partition", f"{f.stem}{slot}")
                 fb.run("create-logical-partition", f"{f.stem}{slot}", "0")
-        for f in sys_files:
+        for f in dynamic:
             if not fb.flash_or_retry("flash", f.stem, str(f)):
                 return
 
@@ -161,18 +184,12 @@ def _do_flash(img_dir: Path, groups: dict, dry_run: bool = False, android_ver: s
         if ask_select("Did you see any errors?", ["No errors — continue", "Stop"]) == "Stop":
             print("  Stopped.")
             return
-
-    modem_files = groups.get("MODEM", [])
-    modem = next((f for f in modem_files if f.name == "modem.img"), None)
-    if modem:
-        print("\n── Rebooting to fastboot (bootloader mode) for modem ──")
-        fb.run("reboot", "bootloader")
-        if not dry_run:
-            ask_confirm("Device is back in fastboot (bootloader) mode and connected?")
-        print("\n── MODEM ──")
-        for slot in ("modem_a", "modem_b"):
-            if not fb.flash_or_retry("flash", slot, str(modem)):
-                return
+        slot = ask_select(
+            "Set active slot? (conversion guides usually switch to A)",
+            ["Don't change", "a", "b"],
+        )
+        if slot in ("a", "b"):
+            fb.run(f"--set-active={slot}")
 
     print("\n── Rebooting ──")
     if dry_run:
