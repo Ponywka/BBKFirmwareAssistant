@@ -1,0 +1,770 @@
+{
+  "CPH2645": {
+    "NA": {
+      "my_preload.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-13R-NA_BLOAT-my_preload-d9ce301925b3.img",
+        "bytes": 2076672,
+        "sha256": "d9ce301925b3baf16c5b72f9a8c8ba1b854347e2763c36bc734654e0c3aea036",
+        "raw_bytes": 2076672,
+        "raw_sha256": "d9ce301925b3baf16c5b72f9a8c8ba1b854347e2763c36bc734654e0c3aea036",
+        "encoding": "identity"
+      }
+    },
+    "EUGLO": {
+      "my_preload.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-13R-EUGLO_BLOAT-my_preload-d8ece7dd719c.img",
+        "bytes": 322539520,
+        "sha256": "d8ece7dd719cc58110ec70ab43457a0d729ef94edf9dfb3fede3a85bd383f39a",
+        "raw_bytes": 322539520,
+        "raw_sha256": "d8ece7dd719cc58110ec70ab43457a0d729ef94edf9dfb3fede3a85bd383f39a",
+        "encoding": "identity"
+      }
+    }
+  },
+  "CPH2649": {
+    "IN": {
+      "my_preload.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-13-IN_BLOAT-my_preload-42de0f463bf7.img",
+        "bytes": 2076672,
+        "sha256": "42de0f463bf79aaea71b9c501d72e8536f8f43f1b2e88da707e6c2175e6aeb51",
+        "raw_bytes": 2076672,
+        "raw_sha256": "42de0f463bf79aaea71b9c501d72e8536f8f43f1b2e88da707e6c2175e6aeb51",
+        "encoding": "identity"
+      }
+    }
+  },
+  "CPH2653": {
+    "EUGLO": {
+      "my_preload.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-13-EUGLO_BLOAT-my_preload-e413796aa4b2.img",
+        "bytes": 2076672,
+        "sha256": "e413796aa4b25c4675bf462b5c94d5fccbd1c42ee396acdf0c9bdd711d031c01",
+        "raw_bytes": 2076672,
+        "raw_sha256": "e413796aa4b25c4675bf462b5c94d5fccbd1c42ee396acdf0c9bdd711d031c01",
+        "encoding": "identity"
+      }
+    }
+  },
+  "CPH2655": {
+    "NA": {
+      "my_preload.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-13-NA_BLOAT-my_preload-8c9dcf29fb68.img",
+        "bytes": 2076672,
+        "sha256": "8c9dcf29fb689d8beb69abe5e16e507e6b0dbc60fb83a899084ed328aede2f76",
+        "raw_bytes": 2076672,
+        "raw_sha256": "8c9dcf29fb689d8beb69abe5e16e507e6b0dbc60fb83a899084ed328aede2f76",
+        "encoding": "identity"
+      }
+    }
+  },
+  "CPH2691": {
+    "IN": {
+      "my_preload.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-13R-IN_BLOAT-my_preload-23d60167f988.img",
+        "bytes": 83718144,
+        "sha256": "23d60167f9886202a0a9d5a11275e0205ccde442c42b7eb8210c29fd1c731470",
+        "raw_bytes": 83718144,
+        "raw_sha256": "23d60167f9886202a0a9d5a11275e0205ccde442c42b7eb8210c29fd1c731470",
+        "encoding": "identity"
+      }
+    }
+  },
+  "CPH2723": {
+    "IN": {
+      "my_preload.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-13S-IN_BLOAT-my_preload-ca64fdc85503.img",
+        "bytes": 2076672,
+        "sha256": "ca64fdc855035a331ba60882e01d3d38016a4c3ad3979c9d30d3fa8b6fca7ed4",
+        "raw_bytes": 2076672,
+        "raw_sha256": "ca64fdc855035a331ba60882e01d3d38016a4c3ad3979c9d30d3fa8b6fca7ed4",
+        "encoding": "identity"
+      },
+      "my_company.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-13S-IN_BLOAT-my_company-90ba8ac6f164.img",
+        "bytes": 335872,
+        "sha256": "90ba8ac6f164eaaf45635ecf3489fb6c25498510a6ef1cea83787817193686a3",
+        "raw_bytes": 335872,
+        "raw_sha256": "90ba8ac6f164eaaf45635ecf3489fb6c25498510a6ef1cea83787817193686a3",
+        "encoding": "identity"
+      }
+    }
+  },
+  "CPH2745": {
+    "IN": {
+      "my_company.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-15-CN_BLOAT-my_company-7d2a1eb51a38.img",
+        "bytes": 335872,
+        "sha256": "7d2a1eb51a3897a0d7776d23e7307bf83fd543978a59574f4ef1857f00ae42c4",
+        "raw_bytes": 335872,
+        "raw_sha256": "7d2a1eb51a3897a0d7776d23e7307bf83fd543978a59574f4ef1857f00ae42c4",
+        "encoding": "identity"
+      },
+      "my_preload.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-15-IN_BLOAT-my_preload-28ec804dfe78.img",
+        "bytes": 81911808,
+        "sha256": "28ec804dfe7894916c461cc1d6880dc07f672b9b567930ffc97a12517f815c2a",
+        "raw_bytes": 81911808,
+        "raw_sha256": "28ec804dfe7894916c461cc1d6880dc07f672b9b567930ffc97a12517f815c2a",
+        "encoding": "identity"
+      },
+      "system_dlkm_oki.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-15-EU_BLOAT-system_dlkm_oki-a421d7801c3f.img",
+        "bytes": 91897856,
+        "sha256": "a421d7801c3f02dd3b6207797dff13a922764d8020d900d9f0eaf15384b57407",
+        "raw_bytes": 91897856,
+        "raw_sha256": "a421d7801c3f02dd3b6207797dff13a922764d8020d900d9f0eaf15384b57407",
+        "encoding": "identity"
+      }
+    }
+  },
+  "CPH2747": {
+    "EU": {
+      "my_company.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-15-CN_BLOAT-my_company-7d2a1eb51a38.img",
+        "bytes": 335872,
+        "sha256": "7d2a1eb51a3897a0d7776d23e7307bf83fd543978a59574f4ef1857f00ae42c4",
+        "raw_bytes": 335872,
+        "raw_sha256": "7d2a1eb51a3897a0d7776d23e7307bf83fd543978a59574f4ef1857f00ae42c4",
+        "encoding": "identity"
+      },
+      "my_preload.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-15-EU_BLOAT-my_preload-a61afbb61449.img",
+        "bytes": 502464512,
+        "sha256": "a61afbb614497bc1edccc3ccf3b5a24647a5fd6a9a15ae7c90b0836b81f7033f",
+        "raw_bytes": 502464512,
+        "raw_sha256": "a61afbb614497bc1edccc3ccf3b5a24647a5fd6a9a15ae7c90b0836b81f7033f",
+        "encoding": "identity"
+      },
+      "system_dlkm_oki.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-15-EU_BLOAT-system_dlkm_oki-a421d7801c3f.img",
+        "bytes": 91897856,
+        "sha256": "a421d7801c3f02dd3b6207797dff13a922764d8020d900d9f0eaf15384b57407",
+        "raw_bytes": 91897856,
+        "raw_sha256": "a421d7801c3f02dd3b6207797dff13a922764d8020d900d9f0eaf15384b57407",
+        "encoding": "identity"
+      }
+    },
+    "GLO": {
+      "my_company.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-15-CN_BLOAT-my_company-7d2a1eb51a38.img",
+        "bytes": 335872,
+        "sha256": "7d2a1eb51a3897a0d7776d23e7307bf83fd543978a59574f4ef1857f00ae42c4",
+        "raw_bytes": 335872,
+        "raw_sha256": "7d2a1eb51a3897a0d7776d23e7307bf83fd543978a59574f4ef1857f00ae42c4",
+        "encoding": "identity"
+      },
+      "my_preload.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-15-GLO_BLOAT-my_preload-98d1e8335c86.img",
+        "bytes": 148996096,
+        "sha256": "98d1e8335c86647a56fb2bf7eec8d8263ae65608c7b852642a1a648de2bcaf5a",
+        "raw_bytes": 148996096,
+        "raw_sha256": "98d1e8335c86647a56fb2bf7eec8d8263ae65608c7b852642a1a648de2bcaf5a",
+        "encoding": "identity"
+      },
+      "system_dlkm_oki.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-15-EU_BLOAT-system_dlkm_oki-a421d7801c3f.img",
+        "bytes": 91897856,
+        "sha256": "a421d7801c3f02dd3b6207797dff13a922764d8020d900d9f0eaf15384b57407",
+        "raw_bytes": 91897856,
+        "raw_sha256": "a421d7801c3f02dd3b6207797dff13a922764d8020d900d9f0eaf15384b57407",
+        "encoding": "identity"
+      }
+    }
+  },
+  "CPH2749": {
+    "NA": {
+      "my_company.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-15-CN_BLOAT-my_company-7d2a1eb51a38.img",
+        "bytes": 335872,
+        "sha256": "7d2a1eb51a3897a0d7776d23e7307bf83fd543978a59574f4ef1857f00ae42c4",
+        "raw_bytes": 335872,
+        "raw_sha256": "7d2a1eb51a3897a0d7776d23e7307bf83fd543978a59574f4ef1857f00ae42c4",
+        "encoding": "identity"
+      },
+      "my_preload.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-15-NA_BLOAT-my_preload-5440dc41b89e.img",
+        "bytes": 2076672,
+        "sha256": "5440dc41b89eb9e64d3331e318c8482c0335df923b2efa6ad3cc8e5e312ad81b",
+        "raw_bytes": 2076672,
+        "raw_sha256": "5440dc41b89eb9e64d3331e318c8482c0335df923b2efa6ad3cc8e5e312ad81b",
+        "encoding": "identity"
+      },
+      "system_dlkm_oki.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-15-EU_BLOAT-system_dlkm_oki-a421d7801c3f.img",
+        "bytes": 91897856,
+        "sha256": "a421d7801c3f02dd3b6207797dff13a922764d8020d900d9f0eaf15384b57407",
+        "raw_bytes": 91897856,
+        "raw_sha256": "a421d7801c3f02dd3b6207797dff13a922764d8020d900d9f0eaf15384b57407",
+        "encoding": "identity"
+      }
+    }
+  },
+  "CPH2767": {
+    "IN": {
+      "my_company.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-15-CN_BLOAT-my_company-7d2a1eb51a38.img",
+        "bytes": 335872,
+        "sha256": "7d2a1eb51a3897a0d7776d23e7307bf83fd543978a59574f4ef1857f00ae42c4",
+        "raw_bytes": 335872,
+        "raw_sha256": "7d2a1eb51a3897a0d7776d23e7307bf83fd543978a59574f4ef1857f00ae42c4",
+        "encoding": "identity"
+      },
+      "my_preload.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-15R-IN_BLOAT-my_preload-7a6dcb9705d1.img",
+        "bytes": 81911808,
+        "sha256": "7a6dcb9705d12e6b9aabb2f33b94bc5174fcfb8a1a4daedd767924b010df7bdd",
+        "raw_bytes": 81911808,
+        "raw_sha256": "7a6dcb9705d12e6b9aabb2f33b94bc5174fcfb8a1a4daedd767924b010df7bdd",
+        "encoding": "identity"
+      },
+      "system_dlkm_oki.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-15R-IN_BLOAT-system_dlkm_oki-2586cfe09efe.img",
+        "bytes": 92471296,
+        "sha256": "2586cfe09efe3bcfd02fe03b1e7775ccb3e457021db511f28df2a1c3eb274929",
+        "raw_bytes": 92471296,
+        "raw_sha256": "2586cfe09efe3bcfd02fe03b1e7775ccb3e457021db511f28df2a1c3eb274929",
+        "encoding": "identity"
+      }
+    }
+  },
+  "CPH2769": {
+    "EU": {
+      "my_company.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-15-CN_BLOAT-my_company-7d2a1eb51a38.img",
+        "bytes": 335872,
+        "sha256": "7d2a1eb51a3897a0d7776d23e7307bf83fd543978a59574f4ef1857f00ae42c4",
+        "raw_bytes": 335872,
+        "raw_sha256": "7d2a1eb51a3897a0d7776d23e7307bf83fd543978a59574f4ef1857f00ae42c4",
+        "encoding": "identity"
+      },
+      "my_preload.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-15R-EU_BLOAT-my_preload-b63ae3b6c0b3.img",
+        "bytes": 502464512,
+        "sha256": "b63ae3b6c0b377ba1f5a6bc776a52d940cc2c56656486a53b00a9b13732bb575",
+        "raw_bytes": 502464512,
+        "raw_sha256": "b63ae3b6c0b377ba1f5a6bc776a52d940cc2c56656486a53b00a9b13732bb575",
+        "encoding": "identity"
+      },
+      "system_dlkm_oki.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-15R-EU_BLOAT-system_dlkm_oki-30bed5dd410a.img",
+        "bytes": 92471296,
+        "sha256": "30bed5dd410a293886f52e88eb1626f51ef85954ca594f198dcbe53f0ab78ef0",
+        "raw_bytes": 92471296,
+        "raw_sha256": "30bed5dd410a293886f52e88eb1626f51ef85954ca594f198dcbe53f0ab78ef0",
+        "encoding": "identity"
+      }
+    },
+    "GLO": {
+      "my_company.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-15-CN_BLOAT-my_company-7d2a1eb51a38.img",
+        "bytes": 335872,
+        "sha256": "7d2a1eb51a3897a0d7776d23e7307bf83fd543978a59574f4ef1857f00ae42c4",
+        "raw_bytes": 335872,
+        "raw_sha256": "7d2a1eb51a3897a0d7776d23e7307bf83fd543978a59574f4ef1857f00ae42c4",
+        "encoding": "identity"
+      },
+      "my_preload.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-15R-GLO_BLOAT-my_preload-86aef75c59a3.img",
+        "bytes": 148996096,
+        "sha256": "86aef75c59a30a38ca512dca96a0cfcc7ba96e003aad58828ff4fbcb7869650b",
+        "raw_bytes": 148996096,
+        "raw_sha256": "86aef75c59a30a38ca512dca96a0cfcc7ba96e003aad58828ff4fbcb7869650b",
+        "encoding": "identity"
+      },
+      "system_dlkm_oki.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-15R-EU_BLOAT-system_dlkm_oki-30bed5dd410a.img",
+        "bytes": 92471296,
+        "sha256": "30bed5dd410a293886f52e88eb1626f51ef85954ca594f198dcbe53f0ab78ef0",
+        "raw_bytes": 92471296,
+        "raw_sha256": "30bed5dd410a293886f52e88eb1626f51ef85954ca594f198dcbe53f0ab78ef0",
+        "encoding": "identity"
+      }
+    }
+  },
+  "CPH2841": {
+    "APC": {
+      "my_preload.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-X9U-APC_BLOAT-my_preload-862c06a0d43f.img",
+        "bytes": 183132160,
+        "sha256": "862c06a0d43f5c2fb2fc0bad2f6828e242f9ffb645443f02dc697318d5ba0d49",
+        "raw_bytes": 183132160,
+        "raw_sha256": "862c06a0d43f5c2fb2fc0bad2f6828e242f9ffb645443f02dc697318d5ba0d49",
+        "encoding": "identity"
+      }
+    },
+    "ID": {
+      "my_preload.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-X9U-ID_BLOAT-my_preload-df8554d258e3.img",
+        "bytes": 985059328,
+        "sha256": "df8554d258e3fffd3ebcc448a33f33dd08941ef0597c163f65de4d008c95de4d",
+        "raw_bytes": 985059328,
+        "raw_sha256": "df8554d258e3fffd3ebcc448a33f33dd08941ef0597c163f65de4d008c95de4d",
+        "encoding": "identity"
+      }
+    },
+    "IN": {
+      "my_preload.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-X9U-IN_BLOAT-my_preload-9563374a1866.img",
+        "bytes": 324435968,
+        "sha256": "9563374a18664c84121459812caac97f787b15cbd8f8a363e64d8528dc6c1989",
+        "raw_bytes": 324435968,
+        "raw_sha256": "9563374a18664c84121459812caac97f787b15cbd8f8a363e64d8528dc6c1989",
+        "encoding": "identity"
+      }
+    },
+    "JP": {
+      "my_preload.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-X9U-JP_BLOAT-my_preload-4c0353b6d800.img",
+        "bytes": 588394496,
+        "sha256": "4c0353b6d800dc67c34440022afc5f3eae8f598616c6fe5fb604ba296bde7abe",
+        "raw_bytes": 588394496,
+        "raw_sha256": "4c0353b6d800dc67c34440022afc5f3eae8f598616c6fe5fb604ba296bde7abe",
+        "encoding": "identity"
+      }
+    },
+    "MX": {
+      "my_preload.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-X9U-MX_BLOAT-my_preload-999734b7a596.img",
+        "bytes": 695984128,
+        "sha256": "999734b7a596d7b41f553d0830d8322b30359843c665761b8d87f5c927226c05",
+        "raw_bytes": 695984128,
+        "raw_sha256": "999734b7a596d7b41f553d0830d8322b30359843c665761b8d87f5c927226c05",
+        "encoding": "identity"
+      }
+    },
+    "MY": {
+      "my_preload.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-X9U-MY_BLOAT-my_preload-0bd4272e0a2d.img",
+        "bytes": 721268736,
+        "sha256": "0bd4272e0a2da34390b1895f7ca7f1c270a901e22ffae2a6b08e2ae10e129651",
+        "raw_bytes": 721268736,
+        "raw_sha256": "0bd4272e0a2da34390b1895f7ca7f1c270a901e22ffae2a6b08e2ae10e129651",
+        "encoding": "identity"
+      }
+    },
+    "SG": {
+      "my_preload.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-X9U-SG_BLOAT-my_preload-c7010c11e616.img",
+        "bytes": 717197312,
+        "sha256": "c7010c11e616d9e2f16780e1b5614c46e13d4295aa872a54760ba7d6c7d310b1",
+        "raw_bytes": 717197312,
+        "raw_sha256": "c7010c11e616d9e2f16780e1b5614c46e13d4295aa872a54760ba7d6c7d310b1",
+        "encoding": "identity"
+      }
+    },
+    "TH": {
+      "my_preload.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-X9U-TH_BLOAT-my_preload-19dcbf4ddc20.img",
+        "bytes": 530198528,
+        "sha256": "19dcbf4ddc2034fa58e429872b331ac35c14d4c2f95ef89bb3a101969e959522",
+        "raw_bytes": 530198528,
+        "raw_sha256": "19dcbf4ddc2034fa58e429872b331ac35c14d4c2f95ef89bb3a101969e959522",
+        "encoding": "identity"
+      }
+    },
+    "TW": {
+      "my_preload.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-X9U-TW_BLOAT-my_preload-6ec67ccf8a01.img",
+        "bytes": 430391296,
+        "sha256": "6ec67ccf8a01226cf32c255c81bf0ea54638ec1dcfb67ebdfe77da3f68dc579f",
+        "raw_bytes": 430391296,
+        "raw_sha256": "6ec67ccf8a01226cf32c255c81bf0ea54638ec1dcfb67ebdfe77da3f68dc579f",
+        "encoding": "identity"
+      }
+    },
+    "VN": {
+      "my_preload.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-X9U-VN_BLOAT-my_preload-7a4e17df48fa.img",
+        "bytes": 723320832,
+        "sha256": "7a4e17df48fa71062c5ef01db124be234a5b6aa26f092b3e8b042b906d4d7d6b",
+        "raw_bytes": 723320832,
+        "raw_sha256": "7a4e17df48fa71062c5ef01db124be234a5b6aa26f092b3e8b042b906d4d7d6b",
+        "encoding": "identity"
+      }
+    }
+  },
+  "OPD2413": {
+    "CN": {
+      "my_preload.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-Pad2Pro-CN_BLOAT-my_preload-6defa7f04b76.img",
+        "bytes": 1327419392,
+        "sha256": "6defa7f04b7677ffd2ff32441c912ccf70734a6af41e0da1e883a2a510badb58",
+        "raw_bytes": 1327419392,
+        "raw_sha256": "6defa7f04b7677ffd2ff32441c912ccf70734a6af41e0da1e883a2a510badb58",
+        "encoding": "identity"
+      }
+    },
+    "EU": {
+      "my_preload.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-Pad2Pro-EU_BLOAT-my_preload-0e78d1fc18d2.img",
+        "bytes": 121843712,
+        "sha256": "0e78d1fc18d25a11af44cbad24514fc6a303bd0f33b528fa07ab239d0e6d8829",
+        "raw_bytes": 121843712,
+        "raw_sha256": "0e78d1fc18d25a11af44cbad24514fc6a303bd0f33b528fa07ab239d0e6d8829",
+        "encoding": "identity"
+      }
+    },
+    "GLO": {
+      "my_preload.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-Pad2Pro-GLO_BLOAT-my_preload-cb6f39a9833e.img",
+        "bytes": 121843712,
+        "sha256": "cb6f39a9833e56e6f68c35c33e882d6000f6003bd95410a5bc2b72aa8dafa1f3",
+        "raw_bytes": 121843712,
+        "raw_sha256": "cb6f39a9833e56e6f68c35c33e882d6000f6003bd95410a5bc2b72aa8dafa1f3",
+        "encoding": "identity"
+      }
+    }
+  },
+  "OPD2513": {
+    "CN": {
+      "my_preload.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-Pad3Pro-CN_BLOAT-my_preload-9f39dcf9dc40.img",
+        "bytes": 745218048,
+        "sha256": "9f39dcf9dc405d786d432b059eea94fe0dd90368009f12e195518a5bdd6be7be",
+        "raw_bytes": 745218048,
+        "raw_sha256": "9f39dcf9dc405d786d432b059eea94fe0dd90368009f12e195518a5bdd6be7be",
+        "encoding": "identity"
+      },
+      "system_dlkm_oki.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-Pad3Pro-CN_BLOAT-system_dlkm_oki-95cd2892bf92.img",
+        "bytes": 95916032,
+        "sha256": "95cd2892bf929d4417996c709a6d85f8c7e6c8d299d440d127b7edc5609692a1",
+        "raw_bytes": 95916032,
+        "raw_sha256": "95cd2892bf929d4417996c709a6d85f8c7e6c8d299d440d127b7edc5609692a1",
+        "encoding": "identity"
+      },
+      "my_company.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-Pad3Pro-CN_BLOAT-my_company-3c673be2229b.img",
+        "bytes": 335872,
+        "sha256": "3c673be2229ba248bd7d551785f30d957936fb85aa497b6f99191457034d78d1",
+        "raw_bytes": 335872,
+        "raw_sha256": "3c673be2229ba248bd7d551785f30d957936fb85aa497b6f99191457034d78d1",
+        "encoding": "identity"
+      }
+    }
+  },
+  "PJZ110": {
+    "CN": {
+      "my_company.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-13-CN_BLOAT-my_company-ec70e6a1bacb.img",
+        "bytes": 335872,
+        "sha256": "ec70e6a1bacb79a2d2ca8d0120e2981d92d702c8ad4b8a1a9bdcb4191339db14",
+        "raw_bytes": 335872,
+        "raw_sha256": "ec70e6a1bacb79a2d2ca8d0120e2981d92d702c8ad4b8a1a9bdcb4191339db14",
+        "encoding": "identity"
+      },
+      "my_preload.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-13-CN_BLOAT-my_preload-7ddd673c86ad.img",
+        "bytes": 1841799168,
+        "sha256": "7ddd673c86ad272709fc2940973944ed988ef51490539456c3743409d8a4a72a",
+        "raw_bytes": 1841799168,
+        "raw_sha256": "7ddd673c86ad272709fc2940973944ed988ef51490539456c3743409d8a4a72a",
+        "encoding": "identity"
+      }
+    }
+  },
+  "PKG110": {
+    "EUGLO": {
+      "odm.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-Ace5-EUGLO_BLOAT-odm-38d3af1f2c50.img",
+        "bytes": 1958461440,
+        "sha256": "38d3af1f2c50eb4ab6f7516c7b9a88a0a9f83c48541c48a2aaebccfafaa4ec2e",
+        "raw_bytes": 1958461440,
+        "raw_sha256": "38d3af1f2c50eb4ab6f7516c7b9a88a0a9f83c48541c48a2aaebccfafaa4ec2e",
+        "encoding": "identity"
+      }
+    },
+    "A5P": {
+      "my_preload.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-Ace5-A5P_BLOAT-my_preload-ee603b54f20e.img",
+        "bytes": 1737830400,
+        "sha256": "ee603b54f20e53ed87886bc98fcd72131ba8012bfc04ffb1597bca638518e782",
+        "raw_bytes": 1737830400,
+        "raw_sha256": "ee603b54f20e53ed87886bc98fcd72131ba8012bfc04ffb1597bca638518e782",
+        "encoding": "identity"
+      }
+    },
+    "CN": {
+      "my_company.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-13R-CN_BLOAT-my_company-84f4ca8f46dd.img",
+        "bytes": 335872,
+        "sha256": "84f4ca8f46ddb044fbada968232ae3e4b723648432780630e18e0a875c4035e0",
+        "raw_bytes": 335872,
+        "raw_sha256": "84f4ca8f46ddb044fbada968232ae3e4b723648432780630e18e0a875c4035e0",
+        "encoding": "identity"
+      },
+      "my_preload.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-13R-CN_BLOAT-my_preload-64f7f73c6475.img",
+        "bytes": 1502457856,
+        "sha256": "64f7f73c64759df5c6806415c8110a24125402cadf342ac7eb47a1b1d81095de",
+        "raw_bytes": 1502457856,
+        "raw_sha256": "64f7f73c64759df5c6806415c8110a24125402cadf342ac7eb47a1b1d81095de",
+        "encoding": "identity"
+      }
+    }
+  },
+  "PKX110": {
+    "CN": {
+      "my_preload.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-13T-CN_BLOAT-my_preload-6700be51cb9e.img",
+        "bytes": 1805488128,
+        "sha256": "6700be51cb9ef50d13224a84b4681f705cf0f9f6e4e3a82ee6c7eecb898e5154",
+        "raw_bytes": 1805488128,
+        "raw_sha256": "6700be51cb9ef50d13224a84b4681f705cf0f9f6e4e3a82ee6c7eecb898e5154",
+        "encoding": "identity"
+      }
+    }
+  },
+  "PLK110": {
+    "CN": {
+      "my_company.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-15-CN_BLOAT-my_company-7d2a1eb51a38.img",
+        "bytes": 335872,
+        "sha256": "7d2a1eb51a3897a0d7776d23e7307bf83fd543978a59574f4ef1857f00ae42c4",
+        "raw_bytes": 335872,
+        "raw_sha256": "7d2a1eb51a3897a0d7776d23e7307bf83fd543978a59574f4ef1857f00ae42c4",
+        "encoding": "identity"
+      },
+      "my_preload.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-15-CN_BLOAT-my_preload-f8a7f665242c.img",
+        "bytes": 1917599744,
+        "sha256": "f8a7f665242c6ca2911012b95db8317de9011a21b93c67968ba1ffa3312c8746",
+        "raw_bytes": 1917599744,
+        "raw_sha256": "f8a7f665242c6ca2911012b95db8317de9011a21b93c67968ba1ffa3312c8746",
+        "encoding": "identity"
+      },
+      "system_dlkm_oki.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-15-CN_BLOAT-system_dlkm_oki-fd5f8df9a317.img",
+        "bytes": 91897856,
+        "sha256": "fd5f8df9a3176ff6b34774dc5dd1ab8ac16ad951665d99d56940c91432d39c45",
+        "raw_bytes": 91897856,
+        "raw_sha256": "fd5f8df9a3176ff6b34774dc5dd1ab8ac16ad951665d99d56940c91432d39c45",
+        "encoding": "identity"
+      }
+    }
+  },
+  "PLQ110": {
+    "CN": {
+      "my_preload.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-Ace6-CN_BLOAT-my_preload-e04bc2a187c4.img",
+        "bytes": 1903386624,
+        "sha256": "e04bc2a187c4fad36f348eb49e8ff8919a371f349a990f9424fc209aabdef429",
+        "raw_bytes": 1903386624,
+        "raw_sha256": "e04bc2a187c4fad36f348eb49e8ff8919a371f349a990f9424fc209aabdef429",
+        "encoding": "identity"
+      },
+      "system_dlkm_oki.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-Ace6-CN_BLOAT-system_dlkm_oki-728085151543.img",
+        "bytes": 12476416,
+        "sha256": "7280851515439a4a8819f009abb5ed52e9a643887ad006725c858d9d7bf9f4d3",
+        "raw_bytes": 12476416,
+        "raw_sha256": "7280851515439a4a8819f009abb5ed52e9a643887ad006725c858d9d7bf9f4d3",
+        "encoding": "identity"
+      },
+      "system_dlkm_gki.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-Ace6-CN_BLOAT-system_dlkm_gki-5dc286c7e5dd.img",
+        "bytes": 12115968,
+        "sha256": "5dc286c7e5ddea1688bfefa4265bba4e72d1cc595b796947e6be9bfefc944b11",
+        "raw_bytes": 12115968,
+        "raw_sha256": "5dc286c7e5ddea1688bfefa4265bba4e72d1cc595b796947e6be9bfefc944b11",
+        "encoding": "identity"
+      }
+    }
+  },
+  "PLR110": {
+    "CN": {
+      "my_company.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-15-CN_BLOAT-my_company-7d2a1eb51a38.img",
+        "bytes": 335872,
+        "sha256": "7d2a1eb51a3897a0d7776d23e7307bf83fd543978a59574f4ef1857f00ae42c4",
+        "raw_bytes": 335872,
+        "raw_sha256": "7d2a1eb51a3897a0d7776d23e7307bf83fd543978a59574f4ef1857f00ae42c4",
+        "encoding": "identity"
+      },
+      "my_preload.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-Ace6T-CN_BLOAT-my_preload-d2832106172c.img",
+        "bytes": 2036408320,
+        "sha256": "d2832106172c6722b8136981467bb786892572713ea801107907d1a872771fb1",
+        "raw_bytes": 2036408320,
+        "raw_sha256": "d2832106172c6722b8136981467bb786892572713ea801107907d1a872771fb1",
+        "encoding": "identity"
+      },
+      "system_dlkm_oki.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-Ace6T-CN_BLOAT-system_dlkm_oki-4b4059d3346b.img",
+        "bytes": 92471296,
+        "sha256": "4b4059d3346b412ea9ad0e90fcd0ee6ee4d0a66156bf21af18fa27102a790be8",
+        "raw_bytes": 92471296,
+        "raw_sha256": "4b4059d3346b412ea9ad0e90fcd0ee6ee4d0a66156bf21af18fa27102a790be8",
+        "encoding": "identity"
+      }
+    },
+    "EU": {
+      "my_company.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-15-CN_BLOAT-my_company-7d2a1eb51a38.img",
+        "bytes": 335872,
+        "sha256": "7d2a1eb51a3897a0d7776d23e7307bf83fd543978a59574f4ef1857f00ae42c4",
+        "raw_bytes": 335872,
+        "raw_sha256": "7d2a1eb51a3897a0d7776d23e7307bf83fd543978a59574f4ef1857f00ae42c4",
+        "encoding": "identity"
+      },
+      "my_preload.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-15R-EU_BLOAT-my_preload-b63ae3b6c0b3.img",
+        "bytes": 502464512,
+        "sha256": "b63ae3b6c0b377ba1f5a6bc776a52d940cc2c56656486a53b00a9b13732bb575",
+        "raw_bytes": 502464512,
+        "raw_sha256": "b63ae3b6c0b377ba1f5a6bc776a52d940cc2c56656486a53b00a9b13732bb575",
+        "encoding": "identity"
+      },
+      "system_dlkm_oki.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-15R-EU_BLOAT-system_dlkm_oki-30bed5dd410a.img",
+        "bytes": 92471296,
+        "sha256": "30bed5dd410a293886f52e88eb1626f51ef85954ca594f198dcbe53f0ab78ef0",
+        "raw_bytes": 92471296,
+        "raw_sha256": "30bed5dd410a293886f52e88eb1626f51ef85954ca594f198dcbe53f0ab78ef0",
+        "encoding": "identity"
+      }
+    },
+    "GLO": {
+      "my_company.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-15-CN_BLOAT-my_company-7d2a1eb51a38.img",
+        "bytes": 335872,
+        "sha256": "7d2a1eb51a3897a0d7776d23e7307bf83fd543978a59574f4ef1857f00ae42c4",
+        "raw_bytes": 335872,
+        "raw_sha256": "7d2a1eb51a3897a0d7776d23e7307bf83fd543978a59574f4ef1857f00ae42c4",
+        "encoding": "identity"
+      },
+      "my_preload.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-15R-GLO_BLOAT-my_preload-86aef75c59a3.img",
+        "bytes": 148996096,
+        "sha256": "86aef75c59a30a38ca512dca96a0cfcc7ba96e003aad58828ff4fbcb7869650b",
+        "raw_bytes": 148996096,
+        "raw_sha256": "86aef75c59a30a38ca512dca96a0cfcc7ba96e003aad58828ff4fbcb7869650b",
+        "encoding": "identity"
+      },
+      "system_dlkm_oki.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-15R-EU_BLOAT-system_dlkm_oki-30bed5dd410a.img",
+        "bytes": 92471296,
+        "sha256": "30bed5dd410a293886f52e88eb1626f51ef85954ca594f198dcbe53f0ab78ef0",
+        "raw_bytes": 92471296,
+        "raw_sha256": "30bed5dd410a293886f52e88eb1626f51ef85954ca594f198dcbe53f0ab78ef0",
+        "encoding": "identity"
+      }
+    },
+    "IN": {
+      "my_company.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-15-CN_BLOAT-my_company-7d2a1eb51a38.img",
+        "bytes": 335872,
+        "sha256": "7d2a1eb51a3897a0d7776d23e7307bf83fd543978a59574f4ef1857f00ae42c4",
+        "raw_bytes": 335872,
+        "raw_sha256": "7d2a1eb51a3897a0d7776d23e7307bf83fd543978a59574f4ef1857f00ae42c4",
+        "encoding": "identity"
+      },
+      "my_preload.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-15R-IN_BLOAT-my_preload-7a6dcb9705d1.img",
+        "bytes": 81911808,
+        "sha256": "7a6dcb9705d12e6b9aabb2f33b94bc5174fcfb8a1a4daedd767924b010df7bdd",
+        "raw_bytes": 81911808,
+        "raw_sha256": "7a6dcb9705d12e6b9aabb2f33b94bc5174fcfb8a1a4daedd767924b010df7bdd",
+        "encoding": "identity"
+      },
+      "system_dlkm_oki.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-15R-IN_BLOAT-system_dlkm_oki-2586cfe09efe.img",
+        "bytes": 92471296,
+        "sha256": "2586cfe09efe3bcfd02fe03b1e7775ccb3e457021db511f28df2a1c3eb274929",
+        "raw_bytes": 92471296,
+        "raw_sha256": "2586cfe09efe3bcfd02fe03b1e7775ccb3e457021db511f28df2a1c3eb274929",
+        "encoding": "identity"
+      }
+    }
+  },
+  "PLZ110": {
+    "CN": {
+      "my_company.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-15-CN_BLOAT-my_company-7d2a1eb51a38.img",
+        "bytes": 335872,
+        "sha256": "7d2a1eb51a3897a0d7776d23e7307bf83fd543978a59574f4ef1857f00ae42c4",
+        "raw_bytes": 335872,
+        "raw_sha256": "7d2a1eb51a3897a0d7776d23e7307bf83fd543978a59574f4ef1857f00ae42c4",
+        "encoding": "identity"
+      },
+      "my_preload.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-15T-CN_BLOAT-my_preload-c755b367805b.img",
+        "bytes": 1954877440,
+        "sha256": "c755b367805b7e401b8ba1530de43f21fa4b2a16001d48ddfcc400e43c297d53",
+        "raw_bytes": 1954877440,
+        "raw_sha256": "c755b367805b7e401b8ba1530de43f21fa4b2a16001d48ddfcc400e43c297d53",
+        "encoding": "identity"
+      },
+      "system_dlkm_oki.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-15T-CN_BLOAT-system_dlkm_oki-65fa0ba3344a.img",
+        "bytes": 92475392,
+        "sha256": "65fa0ba3344acc048eca5693c08db482fc7b67cd05fcffb14705822d02af8489",
+        "raw_bytes": 92475392,
+        "raw_sha256": "65fa0ba3344acc048eca5693c08db482fc7b67cd05fcffb14705822d02af8489",
+        "encoding": "identity"
+      }
+    },
+    "GLO": {
+      "my_preload.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-15T-GLO_BLOAT-my_preload-b7edd6108aee.img",
+        "bytes": 348160,
+        "sha256": "b7edd6108aeef9d378bed2d5e06ec281c23a8bf4e1da250cab55e9e2227a2628",
+        "raw_bytes": 348160,
+        "raw_sha256": "b7edd6108aeef9d378bed2d5e06ec281c23a8bf4e1da250cab55e9e2227a2628",
+        "encoding": "identity"
+      }
+    }
+  },
+  "RMX5010": {
+    "CN": {
+      "my_preload.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-GT7Pro-CN_BLOAT-my_preload-1248977587eb.img",
+        "bytes": 1666228224,
+        "sha256": "1248977587eb3fa5e57c088be10dd69a5326903d9a33b3df3af6f03c43dceef6",
+        "raw_bytes": 1666228224,
+        "raw_sha256": "1248977587eb3fa5e57c088be10dd69a5326903d9a33b3df3af6f03c43dceef6",
+        "encoding": "identity"
+      }
+    }
+  },
+  "RMX5011": {
+    "EU": {
+      "my_preload.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-GT7Pro-EU_BLOAT-my_preload-14501ed5f471.img",
+        "bytes": 98185216,
+        "sha256": "14501ed5f47187f271f56e0b831b39165ddd6b26e2f5ea6bc8a5a5e5a211ab58",
+        "raw_bytes": 98185216,
+        "raw_sha256": "14501ed5f47187f271f56e0b831b39165ddd6b26e2f5ea6bc8a5a5e5a211ab58",
+        "encoding": "identity"
+      }
+    }
+  },
+  "RMX8899": {
+    "CN": {
+      "my_preload.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-NEO8-CN_BLOAT-my_preload-183688e20dbb.img",
+        "bytes": 1871573404,
+        "sha256": "183688e20dbb34486259f3d3cf9d3e860cb3bc40cb8c5b1d028b17dc9e2476d2",
+        "raw_bytes": 1871573404,
+        "raw_sha256": "183688e20dbb34486259f3d3cf9d3e860cb3bc40cb8c5b1d028b17dc9e2476d2",
+        "encoding": "identity"
+      },
+      "system_dlkm_oki.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-NEO8-CN_BLOAT-system_dlkm_oki-df5ebddcdbb8.img",
+        "bytes": 92110972,
+        "sha256": "df5ebddcdbb85a8a7470bc1d5436ad37e446c72b0475361754833735e1022b2d",
+        "raw_bytes": 92110972,
+        "raw_sha256": "df5ebddcdbb85a8a7470bc1d5436ad37e446c72b0475361754833735e1022b2d",
+        "encoding": "identity"
+      },
+      "my_company.img": {
+        "url": "https://github.com/koaaN/Flasher_Builder/releases/download/bloat-assets-v1/bloat-NEO8-CN_BLOAT-my_company-59603377dca7.img",
+        "bytes": 12364,
+        "sha256": "59603377dca738fda1d8c733b3d87712817e54d8ab9390846387b3bfb86c5730",
+        "raw_bytes": 12364,
+        "raw_sha256": "59603377dca738fda1d8c733b3d87712817e54d8ab9390846387b3bfb86c5730",
+        "encoding": "identity"
+      }
+    }
+  }
+}

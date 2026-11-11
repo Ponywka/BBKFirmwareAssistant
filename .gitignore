@@ -24,3 +24,6 @@ payload-dumper-go.exe
 *.img
 downloads/
 firmware/
+
+# Bloat donor images
+bloat/

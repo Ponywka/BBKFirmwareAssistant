@@ -9,6 +9,7 @@ import questionary
 
 DOWNLOADS_DIR = Path.cwd() / "downloads"
 EXTRACTED_DIR = Path.cwd() / "firmware"
+BLOAT_DIR = Path.cwd() / "bloat"
 
 STYLE = questionary.Style([
     ("qmark", "fg:#00bcd4 bold"),
@@ -31,6 +32,11 @@ def _ask(prompt_fn):
 def ask_select(message: str, choices: Sequence[str], **kwargs):
     """Single-choice menu. Returns the chosen string, or None if cancelled."""
     return _ask(lambda: questionary.select(message, choices=list(choices), style=STYLE, **kwargs).ask())
+
+
+def ask_multiselect(message: str, choices: Sequence[str], **kwargs):
+    """Multi-choice menu. Returns the list of chosen strings, or None if cancelled."""
+    return _ask(lambda: questionary.checkbox(message, choices=list(choices), style=STYLE, **kwargs).ask())
 
 
 def ask_text(message: str, **kwargs):

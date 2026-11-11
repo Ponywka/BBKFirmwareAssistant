@@ -81,6 +81,24 @@ The assistant then guides you through bootloader/fastbootd reboots and flashes
 each partition group to both A/B slots, with retry prompts on failure. At the
 end you can reboot to system, wipe data, or leave the device as-is.
 
+### Bloat images
+
+Download donor "bloat" images (my_preload, my_company, odm, ...) from the
+[koaaN/Flasher_Builder](https://github.com/koaaN/Flasher_Builder) bloat release.
+Pick a model (e.g. `CPH2747`), select the region/image files, and they are
+saved as `./bloat/<model>/<region>/<image>.img`, verified against the manifest
+SHA-256 checksums (`.gz` assets are decompressed automatically). The
+**Flash bloat images** action flashes downloaded images as logical partitions
+from fastbootd (with a dry-run mode), e.g. to apply donor images during a
+region conversion.
+
+The image catalog lives in `bbk_firmware_assistant/data/bloat.json` and is
+generated from the upstream assets manifest:
+
+```sh
+.venv/bin/python tools/gen_bloat_json.py /path/to/assets-manifest.json
+```
+
 ## Working directories
 
 These are created in the directory you run the tool from (the current working
@@ -90,6 +108,7 @@ directory), so each project/working folder keeps its own files:
 | --- | --- |
 | `./downloads` | Downloaded OTA packages |
 | `./firmware/<version>` | Extracted partition images |
+| `./bloat/<model>/<region>` | Donor bloat images |
 
 ## Acknowledgements
 

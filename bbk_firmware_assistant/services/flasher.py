@@ -35,6 +35,7 @@ DYNAMIC_PARTS: tuple[str, ...] = (
     "product",
     "system",
     "system_dlkm",
+    "system_dlkm_gki",
     "system_dlkm_oki",
     "system_ext",
     "vendor",
@@ -77,3 +78,4 @@ def collect_images(img_dir: Path) -> list[Path]:
     """
     images = sorted(img_dir.glob("*.img")) + sorted(img_dir.glob("*/*.img"))
     return [f for f in images if not never_flash(f.stem)]
+
