@@ -79,3 +79,18 @@ def collect_images(img_dir: Path) -> list[Path]:
     images = sorted(img_dir.glob("*.img")) + sorted(img_dir.glob("*/*.img"))
     return [f for f in images if not never_flash(f.stem)]
 
+
+# Slot selection menus: label -> (slots for boot/critical partitions, slots for dynamic
+# partitions such as system/vendor/product).
+FIRMWARE_SLOT_MODES: dict[str, tuple[tuple[str, ...], tuple[str, ...]]] = {
+    "Flash only A slot": (("_a",), ("_a",)),
+    "Flash only B slot": (("_b",), ("_b",)),
+    "Flash both (super only A)": (("_a", "_b"), ("_a",)),
+    "Flash both (super only B)": (("_a", "_b"), ("_b",)),
+}
+
+BLOAT_SLOT_MODES: dict[str, tuple[str, ...]] = {
+    "Flash only A slot": ("_a",),
+    "Flash only B slot": ("_b",),
+    "Flash both": ("_a", "_b"),
+}

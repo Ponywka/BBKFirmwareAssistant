@@ -119,6 +119,11 @@ def flow_bloat_flash() -> None:
         print("\n  ⚠ Not known dynamic partitions: " + ", ".join(unknown))
         print("  They will still be recreated as logical partitions of size 0.")
 
+    slot_mode = ask_select("Slots to flash:", list(flasher.BLOAT_SLOT_MODES))
+    if not slot_mode:
+        return
+    slots = flasher.BLOAT_SLOT_MODES[slot_mode]
+
     mode = ask_select("Mode:", ["Dry-run (show commands only)", "Flash (write to device)"])
     if not mode:
         return
@@ -138,13 +143,14 @@ def flow_bloat_flash() -> None:
         return
 
     for f in selected:
-        for slot in ("_a", "_b"):
+        for slot in slots:
             fb.run("delete-logical-partition", f"{f.stem}{slot}-cow")
             fb.run("delete-logical-partition", f"{f.stem}{slot}")
             fb.run("create-logical-partition", f"{f.stem}{slot}", "0")
     for f in selected:
-        if not fb.flash_or_retry("flash", f.stem, str(f)):
-            return
+        for slot in slots:
+            if not fb.flash_or_retry("flash", f.stem + slot, str(f)):
+                return
 
     if not dry:
         if ask_select("Did you see any errors?", ["No errors — continue", "Stop"]) == "Stop":

@@ -91,6 +91,11 @@ def flow_flash() -> None:
         shown = ", ".join(f.name for f in groups[label][:5])
         print(f"  {label}: {shown}{'...' if len(groups[label]) > 5 else ''}")
 
+    slot_mode = ask_select("Slots to flash:", list(flasher.FIRMWARE_SLOT_MODES))
+    if not slot_mode:
+        return
+    slots, dyn_slots = flasher.FIRMWARE_SLOT_MODES[slot_mode]
+
     mode = ask_select("Mode:", ["Dry-run (show commands only)", "Flash (write to device)"])
     if not mode:
         return
@@ -106,13 +111,14 @@ def flow_flash() -> None:
             print("  Cancelled.")
             return
 
-    _do_flash(img_dir, groups, dry_run=dry, android_ver=android_ver)
+    _do_flash(img_dir, groups, dry_run=dry, android_ver=android_ver,
+              slots=slots, dyn_slots=dyn_slots)
 
 
-def _flash_both_slots(fb: Fastboot, files: list[Path]) -> bool:
-    """Flash each file to both _a and _b slots. Returns False if the user aborted."""
+def _flash_slots(fb: Fastboot, files: list[Path], slots: tuple[str, ...]) -> bool:
+    """Flash each file to the given slots. Returns False if the user aborted."""
     for f in files:
-        for slot in ("_a", "_b"):
+        for slot in slots:
             if not fb.flash_or_retry("flash", f.stem + slot, str(f)):
                 return False
     return True
@@ -128,6 +134,8 @@ def _do_flash(
     groups: dict[str, list[Path]],
     dry_run: bool = False,
     android_ver: str = "13-15",
+    slots: tuple[str, ...] = ("_a", "_b"),
+    dyn_slots: tuple[str, ...] = ("_a", "_b"),
 ) -> None:
     fb = Fastboot(dry_run)
 
@@ -145,7 +153,7 @@ def _do_flash(
     # Phase 1 (bootloader-mode fastboot): boot/dtbo/vbmeta*/... plus modem, both slots.
     if groups.get("bootloader"):
         _header("BOOTLOADER partitions", dry_run)
-        if not _flash_both_slots(fb, groups["bootloader"]):
+        if not _flash_slots(fb, groups["bootloader"], slots):
             return
 
     _header("Rebooting into fastbootd", dry_run)
@@ -171,20 +179,21 @@ def _do_flash(
     critical = groups.get("critical", [])
     if critical:
         _header("CRITICAL", dry_run)
-        if not _flash_both_slots(fb, critical):
+        if not _flash_slots(fb, critical, slots):
             return
 
     dynamic = groups.get("dynamic", [])
     if dynamic and not skip_dynamic:
         _header("SYSTEM (logical partitions)", dry_run)
         for f in dynamic:
-            for slot in ("_a", "_b"):
+            for slot in slots:
                 fb.run("delete-logical-partition", f"{f.stem}{slot}-cow")
                 fb.run("delete-logical-partition", f"{f.stem}{slot}")
                 fb.run("create-logical-partition", f"{f.stem}{slot}", "0")
         for f in dynamic:
-            if not fb.flash_or_retry("flash", f.stem, str(f)):
-                return
+            for slot in dyn_slots:
+                if not fb.flash_or_retry("flash", f.stem + slot, str(f)):
+                    return
 
     if not dry_run:
         if ask_select("Did you see any errors?", ["No errors — continue", "Stop"]) == "Stop":
@@ -192,7 +201,7 @@ def _do_flash(
             return
         slot = ask_select(
             "Set active slot? (conversion guides usually switch to A)",
-            ["Don't change", "a", "b"],
+            ["Don't change", "a", "b"] if dyn_slots != ("_b",) else ["Don't change", "b", "a"],
         )
         if slot in ("a", "b"):
             fb.run(f"--set-active={slot}")
