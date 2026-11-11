@@ -142,6 +142,12 @@ def flow_bloat_flash() -> None:
         print("  Cancelled.")
         return
 
+    if flasher.needs_device_slot(slots):
+        current = fb.current_slot()
+        if not current:
+            return
+        slots = flasher.resolve_slots(slots, current)
+
     for f in selected:
         for slot in slots:
             fb.run("delete-logical-partition", f"{f.stem}{slot}-cow")

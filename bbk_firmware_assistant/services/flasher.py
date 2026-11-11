@@ -80,11 +80,17 @@ def collect_images(img_dir: Path) -> list[Path]:
     return [f for f in images if not never_flash(f.stem)]
 
 
+# Slot tokens: "_a"/"_b" are literal; CURRENT/OTHER are resolved against the device.
+CURRENT = "current"
+OTHER = "other"
+
 # Slot selection menus: label -> (slots for boot/critical partitions, slots for dynamic
 # partitions such as system/vendor/product).
 FIRMWARE_SLOT_MODES: dict[str, tuple[tuple[str, ...], tuple[str, ...]]] = {
     "Flash only A slot": (("_a",), ("_a",)),
     "Flash only B slot": (("_b",), ("_b",)),
+    "Flash current slot": ((CURRENT,), (CURRENT,)),
+    "Flash second slot": ((OTHER,), (OTHER,)),
     "Flash both (super only A)": (("_a", "_b"), ("_a",)),
     "Flash both (super only B)": (("_a", "_b"), ("_b",)),
 }
@@ -92,5 +98,18 @@ FIRMWARE_SLOT_MODES: dict[str, tuple[tuple[str, ...], tuple[str, ...]]] = {
 BLOAT_SLOT_MODES: dict[str, tuple[str, ...]] = {
     "Flash only A slot": ("_a",),
     "Flash only B slot": ("_b",),
+    "Flash current slot": (CURRENT,),
+    "Flash second slot": (OTHER,),
     "Flash both": ("_a", "_b"),
 }
+
+
+def resolve_slots(slots: tuple[str, ...], current: str) -> tuple[str, ...]:
+    """Replace CURRENT/OTHER tokens with concrete "_a"/"_b" given the current slot ("_a"/"_b")."""
+    other = "_b" if current == "_a" else "_a"
+    table = {CURRENT: current, OTHER: other}
+    return tuple(table.get(s, s) for s in slots)
+
+
+def needs_device_slot(*slot_groups: tuple[str, ...]) -> bool:
+    return any(s in (CURRENT, OTHER) for g in slot_groups for s in g)

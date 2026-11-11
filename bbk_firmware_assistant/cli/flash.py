@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import re
 import subprocess
 from pathlib import Path
 
@@ -21,6 +22,20 @@ class Fastboot:
             return 0
         print(f"  $ fastboot {' '.join(args)}")
         return subprocess.run(["fastboot", *args]).returncode
+
+    def current_slot(self) -> str | None:
+        """Return "_a"/"_b" from the device (asks the user in dry-run), or None if unknown."""
+        if self.dry_run:
+            pick = ask_select("Current slot on the device (needed for the dry-run):", ["a", "b"])
+            return f"_{pick}" if pick else None
+        res = subprocess.run(["fastboot", "getvar", "current-slot"],
+                             capture_output=True, text=True)
+        m = re.search(r"current-slot:\s*_?([ab])\b", res.stdout + res.stderr)
+        if not m:
+            error("Could not read current-slot from the device")
+            return None
+        print(f"  Device current slot: {m.group(1)}")
+        return f"_{m.group(1)}"
 
     def flash_or_retry(self, *args: str) -> bool:
         """Run a fastboot command; on failure ask the user to retry or stop."""
@@ -149,6 +164,13 @@ def _do_flash(
         if not ask_confirm("Device is in fastboot (bootloader) mode and connected?"):
             print("  Cancelled.")
             return
+
+    if flasher.needs_device_slot(slots, dyn_slots):
+        current = fb.current_slot()
+        if not current:
+            return
+        slots = flasher.resolve_slots(slots, current)
+        dyn_slots = flasher.resolve_slots(dyn_slots, current)
 
     # Phase 1 (bootloader-mode fastboot): boot/dtbo/vbmeta*/... plus modem, both slots.
     if groups.get("bootloader"):
